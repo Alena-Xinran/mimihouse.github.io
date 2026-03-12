@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵屋～ | mimi.house</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #fce4ec, #f8bbd0, #f3e5f5, #fce4ec);
+            background-size: 400% 400%;
+            animation: gradient 8s ease infinite;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #d81b60;
+            margin-bottom: 0.3rem;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #e91e63;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        .photo {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 8px 32px rgba(216, 27, 96, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>喵屋～</h1>
+        <p class="subtitle">mimi.house</p>
+        <img src="mimi.jpg" alt="Mimi" class="photo">
+    </div>
+</body>
+</html>
