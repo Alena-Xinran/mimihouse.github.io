@@ -133,12 +133,29 @@ img {
   font-size: 0.85rem !important;
 }
 
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem !important;
+}
+
+.lang-switch span {
+  opacity: 0.45;
+}
+
+.lang-switch a.active {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* Hero */
 .hero {
   position: relative;
   overflow: hidden;
   background: linear-gradient(180deg, var(--bg-gradient-start) 0%, var(--bg-gradient-end) 100%);
-  padding: 4rem 0 5rem;
+  padding: 3rem 0 3.5rem;
 }
 
 .hero::before {
@@ -175,28 +192,19 @@ img {
 }
 
 .hero h1 {
-  font-size: clamp(2rem, 5vw, 3.2rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.12;
   font-weight: 900;
   color: var(--primary-deepest);
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   margin-bottom: 0.75rem;
 }
 
-.hero h1 span {
-  display: block;
-  font-size: 0.55em;
-  font-weight: 700;
-  color: var(--primary-dark);
-  letter-spacing: 0.12em;
-  margin-top: 0.35rem;
-}
-
 .hero-lead {
-  font-size: 1.12rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 34rem;
-  margin-bottom: 2rem;
+  max-width: 28rem;
+  margin-bottom: 1.5rem;
 }
 
 .hero-actions {
@@ -288,24 +296,15 @@ img {
 
 /* Sections */
 section {
-  padding: 4.5rem 0;
-}
-
-.section-label {
-  display: inline-block;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--primary-dark);
-  margin-bottom: 0.65rem;
+  padding: 3rem 0;
 }
 
 .section-title {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
   font-weight: 900;
   color: var(--primary-deepest);
-  margin-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .section-desc {
@@ -326,17 +325,18 @@ section {
 /* Cards */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
 }
 
 .feature-card {
   background: var(--card);
   border: 2px solid var(--sketch);
   border-radius: var(--radius);
-  padding: 1.5rem;
+  padding: 1.25rem 1rem 1.1rem;
   box-shadow: 0 6px 20px var(--shadow);
   transition: transform 0.2s, box-shadow 0.2s;
+  text-align: center;
 }
 
 .feature-card:hover {
@@ -344,28 +344,38 @@ section {
   box-shadow: 0 12px 28px var(--shadow-strong);
 }
 
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin: 0 auto 0.65rem;
+}
+
 .feature-card h3 {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 800;
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.3rem;
   color: var(--primary-deepest);
 }
 
 .feature-card p {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   color: var(--text-secondary);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
-.feature-tag {
-  display: inline-block;
-  margin-top: 0.85rem;
-  padding: 0.2rem 0.65rem;
-  border-radius: 999px;
-  background: var(--bg-warm);
-  color: var(--primary-dark);
-  font-size: 0.72rem;
-  font-weight: 700;
+.disclaimer-inline {
+  margin-top: 1.75rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.fine-print {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-light);
 }
 
 /* Highlight band */
@@ -472,7 +482,7 @@ section {
   background: var(--primary-deepest);
   color: #FFFCF5;
   text-align: center;
-  padding: 4rem 0;
+  padding: 2.75rem 0;
 }
 
 .cta-section h2 {
@@ -497,7 +507,7 @@ section {
 .site-footer {
   background: var(--bg-warm);
   border-top: 2px solid var(--border);
-  padding: 2.5rem 0 2rem;
+  padding: 1.5rem 0;
 }
 
 .footer-grid {
@@ -571,7 +581,7 @@ section {
 }
 
 .legal-header {
-  padding: 3rem 0 2rem;
+  padding: 2rem 0 1.25rem;
   text-align: center;
 }
 
@@ -591,16 +601,16 @@ section {
   background: var(--card);
   border: 2px solid var(--sketch);
   border-radius: var(--radius);
-  padding: 2rem 2.25rem;
+  padding: 1.5rem 1.75rem;
   box-shadow: 0 8px 32px var(--shadow);
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .legal-content h2 {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 800;
   color: var(--primary-deepest);
-  margin: 2rem 0 0.75rem;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .legal-content h2:first-child {
@@ -609,9 +619,9 @@ section {
 
 .legal-content p,
 .legal-content li {
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  line-height: 1.75;
+  line-height: 1.65;
 }
 
 .legal-content ul,
