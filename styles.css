@@ -97,7 +97,8 @@ img {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  background: rgba(255, 252, 245, 0.95);
   border: 2px solid rgba(255, 252, 245, 0.85);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
@@ -249,8 +250,9 @@ img {
 .hero-photo {
   width: 100%;
   aspect-ratio: 1;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 50%;
+  background: var(--card);
   border: 6px solid rgba(255, 255, 255, 0.9);
   box-shadow: 0 16px 48px var(--shadow-strong);
 }
@@ -313,11 +315,12 @@ section {
 }
 
 .paw-divider {
-  text-align: center;
-  color: var(--primary);
-  letter-spacing: 1rem;
-  font-size: 0.9rem;
-  padding: 0.5rem 0 2rem;
+  width: 4rem;
+  height: 3px;
+  margin: 0 auto 2rem;
+  border-radius: 999px;
+  background: var(--btn-gradient);
+  opacity: 0.85;
 }
 
 /* Cards */
@@ -339,11 +342,6 @@ section {
 .feature-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 28px var(--shadow-strong);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-bottom: 0.75rem;
 }
 
 .feature-card h3 {
@@ -454,10 +452,16 @@ section {
   gap: 1.25rem;
 }
 
+.gallery-single {
+  grid-template-columns: minmax(0, 320px);
+  justify-content: center;
+}
+
 .gallery img {
   width: 100%;
   height: 260px;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--card);
   border-radius: var(--radius);
   border: 2px solid var(--sketch);
   box-shadow: 0 8px 24px var(--shadow);
