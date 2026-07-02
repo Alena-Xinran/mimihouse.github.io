@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NineLivesCat 九龄猫。AI 猫咪健康检测，微信小程序与 iOS。">
-  <title>NineLivesCat | mimi.house</title>
+  <meta name="description" content="九龄猫 NineLivesCat — AI 猫咪健康检测。拍一拍早知道，疼痛、便便、呕吐物、牙齿检测与猫语翻译。微信小程序与 iOS。">
+  <title>九龄猫 · AI 猫咪健康管家 | mimi.house</title>
   <link rel="stylesheet" href="../styles.css">
   <link rel="alternate" hreflang="en" href="/">
   <link rel="alternate" hreflang="zh" href="/zh/">
   <link rel="icon" href="../logo.png" type="image/png">
 </head>
 <body>
-  <nav class="site-nav">
-    <div class="container">
+  <nav class="site-nav" id="site-nav">
+    <div class="container nav-inner">
       <a class="brand" href="/zh/">
-        <img class="brand-mark" src="../logo.png" alt="NineLivesCat">
-        NineLivesCat
+        <img class="brand-mark" src="../logo.png" alt="九龄猫">
+        九龄猫
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" type="button" aria-label="打开菜单" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#features">功能</a></li>
+        <li><a href="#posters">展示</a></li>
+        <li><a href="#platform">平台</a></li>
+        <li><a href="#download">下载</a></li>
         <li><a href="/zh/privacy/">隐私</a></li>
-        <li><a href="/zh/terms/">条款</a></li>
         <li class="lang-switch"><a href="/">EN</a><span>|</span><a class="active" href="/zh/">中文</a></li>
       </ul>
     </div>
@@ -29,76 +34,263 @@
   <header class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="hero-badge">mimi.house</div>
+        <div class="hero-badge">🐾 mimi.house · 老年猫健康管家</div>
         <h1>
-          拍一拍<br>早知道
+          拍一拍<br>
+          <span class="hero-accent">早知道</span>
         </h1>
-        <p class="hero-lead">AI 健康检测，守护猫咪健康。微信小程序与 iOS 可用。</p>
+        <p class="hero-lead">
+          九龄猫是你的 AI 猫咪健康伴侣，尤其关注老年猫和病猫。
+          一张照片、一声喵叫，即时分析，帮你早发现、早干预。
+        </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#download">立即体验</a>
-          <a class="btn btn-ghost" href="#features">查看功能</a>
+          <a class="btn btn-ghost" href="#features">了解功能</a>
+        </div>
+        <div class="hero-tags">
+          <span class="tag">微信小程序</span>
+          <span class="tag">iOS App</span>
+          <span class="tag">AI 驱动</span>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-photo-wrap">
-          <img class="hero-photo" src="../logo.png" alt="NineLivesCat">
+        <div class="phone-mockup">
+          <div class="phone-notch"></div>
+          <img class="phone-screen" src="../assets/posters/poster1.png" alt="九龄猫疼痛检测">
         </div>
+        <div class="hero-float-card top">😿 疼痛评分 · AI 分析</div>
+        <div class="hero-float-card bottom">📈 持续追踪健康趋势</div>
       </div>
     </div>
   </header>
 
+  <section class="highlight-band">
+    <div class="container highlight-grid">
+      <div class="highlight-item">
+        <div class="highlight-num">5</div>
+        <div class="highlight-label">AI 健康检测</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-num">24/7</div>
+        <div class="highlight-label">AI 管家畅聊</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-num">📅</div>
+        <div class="highlight-label">健康日历</div>
+      </div>
+      <div class="highlight-item">
+        <div class="highlight-num">🩺</div>
+        <div class="highlight-label">在线问医生</div>
+      </div>
+    </div>
+  </section>
+
   <section id="features">
-    <div class="container features-section">
-      <h2 class="section-title">健康检测</h2>
-      <div class="card-grid card-grid-five">
-        <article class="feature-card">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">五大智能检测</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">
+          拍照或录音，AI 即时分析并给出诊断与护理建议。
+          建立猫咪档案、持续记录，评估结果会越来越精准。
+        </p>
+      </div>
+      <div class="card-grid card-grid-features">
+        <article class="feature-card feature-card-rich">
           <div class="feature-icon-wrap">
             <img class="feature-icon" src="../assets/scan1.png" alt="疼痛检测">
           </div>
           <h3>疼痛检测</h3>
+          <p>上传面部或身体照片，AI 评估表情与姿态中的疼痛信号。特别适合善于隐藏不适的老年猫。</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card-rich">
           <div class="feature-icon-wrap">
             <img class="feature-icon" src="../assets/scan2.png" alt="呕吐物检测">
           </div>
           <h3>呕吐物检测</h3>
+          <p>拍摄呕吐物照片，AI 分析颜色、质地与可能原因——毛球、饮食问题，或需要就医的警示。</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card-rich">
           <div class="feature-icon-wrap">
             <img class="feature-icon" src="../assets/scan3.png" alt="便便检测">
           </div>
           <h3>便便检测</h3>
+          <p>通过便便照片监测消化健康，追踪形态与颜色变化，及早发现肠胃问题。</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card-rich">
           <div class="feature-icon-wrap">
             <img class="feature-icon" src="../assets/scan5.png" alt="牙齿检测">
           </div>
           <h3>牙齿检测</h3>
+          <p>从侧面拍摄牙齿与牙龈，AI 检查牙结石、炎症等口腔健康隐患。</p>
         </article>
-        <article class="feature-card">
+        <article class="feature-card feature-card-rich">
           <div class="feature-icon-wrap">
-            <img class="feature-icon" src="../assets/scan4.png" alt="猫语翻译">
+            <img class="feature-icon" src="../assets/scan4-1.png" alt="猫语翻译">
           </div>
           <h3>猫语翻译</h3>
+          <p>录制猫咪的叫声，AI 翻译含义、推测场景，并给出回应建议。</p>
         </article>
       </div>
       <p class="disclaimer-inline">检测结果仅供参考，不能替代兽医诊断。紧急情况请立即就医。</p>
     </div>
   </section>
 
-  <section id="download" class="cta-section">
+  <section id="posters" class="posters-section">
     <div class="container">
-      <h2>下载 NineLivesCat</h2>
-      <p>微信搜索小程序，或 App Store 下载 iOS 版。</p>
-      <a class="btn btn-primary" href="mailto:alena@mimi.house">alena@mimi.house</a>
+      <div class="section-head">
+        <h2 class="section-title">功能一览</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">从疼痛评估到猫语翻译——每一项检测都简单友好，结果还可生成海报分享。</p>
+      </div>
+      <div class="poster-carousel" tabindex="0" aria-label="App 功能展示">
+        <figure class="poster-slide">
+          <img src="../assets/posters/poster1.png" alt="疼痛检测插画">
+          <figcaption>疼痛检测 · 发现隐藏的不适</figcaption>
+        </figure>
+        <figure class="poster-slide">
+          <img src="../assets/posters/poster2.png" alt="呕吐物检测插画">
+          <figcaption>呕吐物检测 · 了解发生了什么</figcaption>
+        </figure>
+        <figure class="poster-slide">
+          <img src="../assets/posters/poster3.png" alt="便便检测插画">
+          <figcaption>便便检测 · 追踪消化健康</figcaption>
+        </figure>
+        <figure class="poster-slide">
+          <img src="../assets/posters/poster4.png" alt="牙齿检测插画">
+          <figcaption>牙齿检测 · 守护口腔健康</figcaption>
+        </figure>
+        <figure class="poster-slide">
+          <img src="../assets/posters/poster5.png" alt="猫语翻译 Meow 到 我饿了">
+          <figcaption>猫语翻译 · 听懂它在说什么</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="platform" class="platform-section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">不只是检测</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">九龄猫是完整的猫咪健康管理平台——为想要主动守护毛孩子的家长而生。</p>
+      </div>
+      <div class="platform-grid">
+        <article class="platform-card">
+          <div class="platform-icon">📋</div>
+          <h3>健康档案</h3>
+          <p>为每只猫建立档案——品种、年龄、体重、病史。AI 会结合这些信息给出更个性化的分析。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon">📈</div>
+          <h3>趋势追踪</h3>
+          <p>可视化疼痛、便便、呕吐、牙齿和体重趋势。在问题变严重之前，发现细微变化。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon">🤖</div>
+          <h3>AI 管家</h3>
+          <p>与专属猫咪健康 AI 畅聊。饮食、症状、用药——回答基于你家猫的真实记录。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon">⏰</div>
+          <h3>提醒与病历</h3>
+          <p>设置疫苗、驱虫、用药提醒。就诊笔记和医疗照片，统一保存在一个地方。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon">⛑</div>
+          <h3>急救指南</h3>
+          <p>内置心脏骤停、异物卡喉、中毒、中暑、外伤等应急卡片——先稳住，再送医。</p>
+        </article>
+        <article class="platform-card">
+          <div class="platform-icon">👨‍⚕️</div>
+          <h3>在线问医生</h3>
+          <p>连接执业兽医获取专业建议。医生可查看猫咪完整的检测记录，给出更有依据的回复。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="steps-section">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title">如何使用</h2>
+        <div class="paw-divider"></div>
+      </div>
+      <div class="steps">
+        <article class="step-card">
+          <h3>建立档案</h3>
+          <p>添加猫咪的名字、品种、年龄和照片。记录越丰富，AI 分析越精准。</p>
+        </article>
+        <article class="step-card">
+          <h3>拍照检测</h3>
+          <p>选择检测类型，拍照或录音，几秒内获得 AI 诊断与护理建议。</p>
+        </article>
+        <article class="step-card">
+          <h3>追踪与行动</h3>
+          <p>在健康日历查看趋势，与 AI 管家对话，或在异常时咨询兽医。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="cta-section">
+    <div class="container cta-inner">
+      <img class="cta-logo" src="../logo.png" alt="">
+      <h2>现在开始，更聪明地守护猫咪</h2>
+      <p>微信搜索「九龄猫」小程序，或在 App Store 下载 iOS 版。免费体验，升级会员享更多检测次数与 AI 畅聊。</p>
+      <div class="cta-actions">
+        <a class="btn btn-light" href="mailto:alena@mimi.house">联系我们</a>
+        <a class="btn btn-outline-light" href="#features">了解更多</a>
+      </div>
+      <p class="cta-email">alena@mimi.house</p>
     </div>
   </section>
 
   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand-col">
+        <div class="footer-brand">九龄猫 NineLivesCat</div>
+        <p class="footer-desc">AI 驱动的猫咪健康伴侣。拍一拍，早知道——因为每只猫都值得拥有九条美好的生命。</p>
+      </div>
+      <div class="footer-col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="#features">功能</a></li>
+          <li><a href="#posters">展示</a></li>
+          <li><a href="#download">下载</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>法律</h4>
+        <ul>
+          <li><a href="/zh/privacy/">隐私政策</a></li>
+          <li><a href="/zh/terms/">使用条款</a></li>
+          <li><a href="/">English</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="container footer-bottom">
-      <span>© 2026 NineLivesCat · mimi.house</span>
-      <span><a href="/zh/privacy/">隐私与支持</a> · <a href="/zh/terms/">使用条款</a> · <a href="/">EN</a></span>
+      <span>© 2026 九龄猫 · mimi.house</span>
+      <span>AI 结果仅供参考 · 不能替代兽医诊断</span>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      if (!toggle || !nav) return;
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('nav-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('nav-open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
