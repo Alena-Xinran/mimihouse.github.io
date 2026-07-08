@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NineLivesCat. AI cat health checks on WeChat and iOS.">
+  <meta name="description" content="NineLivesCat — AI cat health checks & personal butler. Snap a photo, know sooner. WeChat Mini Program & iOS.">
   <title>NineLivesCat | mimi.house</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="alternate" hreflang="zh" href="/zh/">
@@ -19,6 +19,8 @@
       </a>
       <ul class="nav-links">
         <li><a href="#features">Features</a></li>
+        <li><a href="#posters">Gallery</a></li>
+        <li><a href="#how">How It Works</a></li>
         <li><a href="/privacy/">Privacy</a></li>
         <li><a href="/terms/">Terms</a></li>
         <li class="lang-switch"><a class="active" href="/">EN</a><span>|</span><a href="/zh/">中文</a></li>
@@ -27,78 +29,270 @@
   </nav>
 
   <header class="hero">
+    <div class="hero-deco flowers" aria-hidden="true"></div>
+    <div class="hero-deco cat-left" aria-hidden="true">
+      <svg class="cat-svg" viewBox="0 0 160 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="80" cy="115" rx="55" ry="18" fill="rgba(74,55,40,0.12)"/>
+        <path d="M55 95 C50 70 60 45 80 40 C100 45 110 70 105 95 Z" fill="#E8A855" stroke="#C07830" stroke-width="2"/>
+        <path d="M55 95 C60 105 100 105 105 95" fill="#FFF5E6" stroke="#C07830" stroke-width="1.5"/>
+        <circle cx="68" cy="62" r="4" fill="#4A3728"/><circle cx="92" cy="62" r="4" fill="#4A3728"/>
+        <path d="M74 72 Q80 76 86 72" stroke="#4A3728" stroke-width="1.5" fill="none"/>
+        <path d="M55 50 L48 35 L58 42 Z" fill="#E8A855" stroke="#C07830" stroke-width="1.5"/>
+        <path d="M105 50 L112 35 L102 42 Z" fill="#E8A855" stroke="#C07830" stroke-width="1.5"/>
+        <path d="M60 68 L45 65" stroke="#4A3728" stroke-width="1" opacity="0.5"/>
+        <path d="M100 68 L115 65" stroke="#4A3728" stroke-width="1" opacity="0.5"/>
+      </svg>
+    </div>
+    <div class="hero-deco cat-right" aria-hidden="true">
+      <svg class="cat-svg" viewBox="0 0 120 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <ellipse cx="60" cy="88" rx="40" ry="12" fill="rgba(74,55,40,0.1)"/>
+        <ellipse cx="60" cy="55" rx="35" ry="30" fill="#B0A090" stroke="#8B7355" stroke-width="1.5"/>
+        <ellipse cx="60" cy="62" rx="22" ry="18" fill="#FFF5E6"/>
+        <path d="M30 40 L22 22 L35 32 Z" fill="#B0A090" stroke="#8B7355" stroke-width="1.5"/>
+        <path d="M90 40 L98 22 L85 32 Z" fill="#B0A090" stroke="#8B7355" stroke-width="1.5"/>
+        <path d="M48 58 Q52 52 56 58" stroke="#4A3728" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M64 58 Q68 52 72 58" stroke="#4A3728" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <path d="M54 68 Q60 72 66 68" stroke="#4A3728" stroke-width="1.2" fill="none"/>
+      </svg>
+    </div>
+
     <div class="container hero-grid">
       <div class="hero-copy">
-        <div class="hero-badge">mimi.house</div>
+        <div class="hero-badge">mimi.house · AI Cat Care</div>
         <h1>
           Snap a Photo,<br>Know Sooner
         </h1>
-        <p class="hero-lead">AI health checks for your cat. Available on WeChat and iOS.</p>
+        <p class="hero-lead">
+          Your cat's personal AI butler — pain checks, stool analysis, dental scans, meow translation, and vet-ready reports. Like a sunny afternoon in the meadow, always by your side.
+        </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#download">Get the App</a>
-          <a class="btn btn-ghost" href="#features">See Features</a>
+          <a class="btn btn-ghost" href="#posters">See Gallery</a>
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-photo-wrap">
-          <img class="hero-photo" src="logo.png" alt="NineLivesCat">
+        <div class="hero-phone-stack">
+          <div class="hero-phone-main">
+            <img src="ai_en/1284x2778_v2.png" alt="NineLivesCat AI Butler — Ask anything about your cat">
+          </div>
+          <div class="hero-phone-shadow"></div>
+          <div class="hero-float-card top">🩺 5 Health Checks</div>
+          <div class="hero-float-card bottom">🐱 AI Butler 24/7</div>
         </div>
       </div>
     </div>
   </header>
 
-  <section id="features">
-    <div class="container features-section">
-      <h2 class="section-title">Health Checks</h2>
-      <div class="card-grid card-grid-five">
-        <article class="feature-card">
-          <div class="feature-icon-wrap">
-            <img class="feature-icon" src="assets/scan1.png" alt="Pain Check">
-          </div>
-          <h3>Pain Check</h3>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon-wrap">
-            <img class="feature-icon" src="assets/scan2.png" alt="Vomit Check">
-          </div>
-          <h3>Vomit Check</h3>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon-wrap">
-            <img class="feature-icon" src="assets/scan3.png" alt="Stool Check">
-          </div>
-          <h3>Stool Check</h3>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon-wrap">
-            <img class="feature-icon" src="assets/scan5.png" alt="Dental Check">
-          </div>
-          <h3>Dental Check</h3>
-        </article>
-        <article class="feature-card">
-          <div class="feature-icon-wrap">
-            <img class="feature-icon" src="assets/scan4-1.png" alt="Meow Translation">
-          </div>
-          <h3>Meow Translation</h3>
-        </article>
+  <section class="stats-band">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">AI Health Scans</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Personal Butler Chat</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2</div>
+          <div class="stat-label">Platforms · WeChat & iOS</div>
+        </div>
       </div>
-      <p class="disclaimer-inline">AI results are for reference only. Not a substitute for a vet. Emergencies need immediate care.</p>
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <div class="section-panel features-section">
+        <h2 class="section-title">Health Checks</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">Point your camera — AI analyzes in seconds and gives clear, actionable guidance. Not a vet visit, but a helpful head start.</p>
+        <div class="card-grid card-grid-five">
+          <article class="feature-card">
+            <div class="feature-icon-wrap">
+              <img class="feature-icon" src="assets/scan1.png" alt="Pain Check">
+            </div>
+            <h3>Pain Check</h3>
+            <p>Facial expression analysis</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon-wrap">
+              <img class="feature-icon" src="assets/scan2.png" alt="Vomit Check">
+            </div>
+            <h3>Vomit Check</h3>
+            <p>Identify causes quickly</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon-wrap">
+              <img class="feature-icon" src="assets/scan3.png" alt="Stool Check">
+            </div>
+            <h3>Stool Check</h3>
+            <p>Digestive health insights</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon-wrap">
+              <img class="feature-icon" src="assets/scan5.png" alt="Dental Check">
+            </div>
+            <h3>Dental Check</h3>
+            <p>Gum & teeth assessment</p>
+          </article>
+          <article class="feature-card">
+            <div class="feature-icon-wrap">
+              <img class="feature-icon" src="assets/scan4-1.png" alt="Meow Translation">
+            </div>
+            <h3>Meow Translation</h3>
+            <p>Understand your cat</p>
+          </article>
+        </div>
+        <p class="disclaimer-inline">AI results are for reference only. Not a substitute for a vet. Emergencies need immediate professional care.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="posters" class="poster-section">
+    <div class="container">
+      <div class="section-panel">
+        <h2 class="section-title">App Gallery</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">Painted under blue skies — every screen designed to feel warm, trustworthy, and cat-loving. Tap any poster to enlarge.</p>
+        <div class="poster-carousel-wrap">
+          <div class="poster-carousel">
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/1284x2778_v2.png" alt="Ask anything about your cat — AI Butler"></div>
+              <p class="poster-caption">AI Butler</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/05df79e3-ee45-47e7-beda-fd25079f078e_1284x2778.png" alt="Smile check in seconds — Dental Scan"></div>
+              <p class="poster-caption">Dental Scan</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/30e48989-d3ad-42f4-a2d5-27f6c19d9a76_1284x2778.png" alt="Snap and know — Health Checks"></div>
+              <p class="poster-caption">Health Checks</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/39dae44b-5651-4041-bd05-8afa33869585_1284x2778.png" alt="Your private cat AI butler"></div>
+              <p class="poster-caption">Private Butler</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/5f701e86-8066-479c-ac30-b852bbe28583_1284x2778.png" alt="Instant detection results"></div>
+              <p class="poster-caption">Instant Results</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/b8784645-d5be-434b-aaee-76463f8931ac_1284x2778.png" alt="Cat health monitoring"></div>
+              <p class="poster-caption">Health Monitor</p>
+            </div>
+            <div class="poster-slide">
+              <div class="poster-frame"><img src="ai_en/cadf8b24-c950-423b-b14a-36aa86709236_1284x2778.png" alt="Comprehensive cat care"></div>
+              <p class="poster-caption">Full Care</p>
+            </div>
+          </div>
+          <p class="poster-hint">← Scroll to explore all posters →</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <div class="section-panel">
+        <h2 class="section-title">How It Works</h2>
+        <div class="paw-divider"></div>
+        <p class="section-desc">Three simple steps — from photo to peace of mind.</p>
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-icon">📸</div>
+            <h3>Snap a Photo</h3>
+            <p>Take a picture of your cat's face, vomit, stool, teeth, or record a meow.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">🤖</div>
+            <h3>AI Analyzes</h3>
+            <p>Our AI reads the image in seconds and generates a detailed health report.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-icon">💡</div>
+            <h3>Get Guidance</h3>
+            <p>Receive clear diagnosis hints and care suggestions — share with your vet anytime.</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-band">
+    <div class="container">
+      <div class="section-panel about-grid">
+        <div class="about-text">
+          <h3>Your Cat's Sunny-Day Companion</h3>
+          <p>NineLivesCat blends AI health scanning with a warm, personal butler chat — like having a knowledgeable friend who loves cats as much as you do.</p>
+          <p>Every screen is painted with care: blue skies, soft clouds, and curious kittens. Because caring for your cat should feel as comforting as a meadow in spring.</p>
+          <div class="about-tags">
+            <span class="about-tag">WeChat Mini Program</span>
+            <span class="about-tag">iOS App</span>
+            <span class="about-tag">AI Butler</span>
+            <span class="about-tag">Vet-Ready Reports</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-logo-ring">
+            <img src="logo.png" alt="NineLivesCat logo">
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <section id="download" class="cta-section">
     <div class="container">
-      <h2>Download NineLivesCat</h2>
-      <p>WeChat Mini Program or App Store (iOS).</p>
-      <a class="btn btn-primary" href="mailto:alena@mimi.house">alena@mimi.house</a>
+      <div class="cta-panel">
+        <h2>Download NineLivesCat</h2>
+        <p>Search for our WeChat Mini Program, or download from the App Store on iOS. Questions? We'd love to hear from you.</p>
+        <div class="cta-buttons">
+          <a class="btn btn-primary" href="mailto:alena@mimi.house">alena@mimi.house</a>
+          <a class="btn btn-ghost" href="/zh/">中文版</a>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.png" alt="">
+          NineLivesCat
+        </div>
+        <p class="footer-desc">AI-powered cat health checks & personal butler. Snap a photo, know sooner — on WeChat and iOS.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#posters">Gallery</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="/privacy/">Privacy & Support</a></li>
+          <li><a href="/terms/">Terms of Use</a></li>
+          <li><a href="/zh/">中文版</a></li>
+        </ul>
+      </div>
+    </div>
     <div class="container footer-bottom">
       <span>© 2026 NineLivesCat · mimi.house</span>
-      <span><a href="/privacy/">Privacy &amp; Support</a> · <a href="/terms/">Terms of Use</a> · <a href="/zh/">中文</a></span>
+      <span>Made with 🐾 for cat lovers everywhere</span>
     </div>
   </footer>
+
+  <div id="lightbox" class="lightbox" role="dialog" aria-label="Poster preview">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
