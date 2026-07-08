@@ -1,12 +1,16 @@
 :root {
-  --sky-top: #5BA3D9;
-  --sky-mid: #87CEEB;
-  --sky-light: #B8E0F5;
-  --cloud: rgba(255, 255, 255, 0.92);
-  --meadow: #6AAF4A;
-  --meadow-light: #8BC34A;
-  --meadow-dark: #4E8B32;
+  --sky-top: #4A7FB5;
+  --sky-mid: #6BA8D6;
+  --sky-light: #9ECAE8;
+  --sky-warm: #E8C88A;
+  --cloud: rgba(255, 252, 245, 0.94);
+  --meadow: #5E9A42;
+  --meadow-light: #7CB356;
+  --meadow-dark: #3D6E28;
+  --meadow-gold: #B8C85A;
   --flower: #FFF8E7;
+  --flower-pink: #F5D0C8;
+  --flower-lavender: #D8C8E8;
   --cream: #FFF9F0;
   --cream-warm: #F7F0E4;
   --card: rgba(255, 252, 245, 0.94);
@@ -38,22 +42,46 @@ html {
   scroll-behavior: smooth;
 }
 
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(ellipse 115% 95% at 50% 38%, transparent 35%, rgba(42, 32, 22, 0.22) 100%);
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   color: var(--text);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
-  background:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
-    linear-gradient(180deg,
-      var(--sky-top) 0%,
+  background-color: var(--meadow-dark);
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='5' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='0.11'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.03 0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)' opacity='0.07'/%3E%3C/svg%3E"),
+    radial-gradient(ellipse 90% 28% at 50% 40%, rgba(255, 228, 170, 0.55) 0%, transparent 68%),
+    radial-gradient(ellipse 42% 28% at 12% 14%, rgba(74, 127, 181, 0.95) 0%, transparent 72%),
+    radial-gradient(ellipse 48% 32% at 88% 10%, rgba(110, 175, 220, 0.9) 0%, transparent 70%),
+    radial-gradient(ellipse 55% 38% at 48% 6%, rgba(158, 202, 232, 0.85) 0%, transparent 74%),
+    radial-gradient(ellipse 38% 22% at 68% 18%, rgba(255, 248, 235, 0.45) 0%, transparent 68%),
+    radial-gradient(ellipse 45% 26% at 22% 76%, rgba(94, 154, 66, 0.92) 0%, transparent 72%),
+    radial-gradient(ellipse 52% 30% at 78% 80%, rgba(124, 179, 86, 0.88) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 24% at 42% 88%, rgba(61, 110, 40, 0.95) 0%, transparent 68%),
+    radial-gradient(ellipse 35% 18% at 60% 72%, rgba(184, 200, 90, 0.5) 0%, transparent 65%),
+    linear-gradient(172deg,
+      #3A5F8F 0%,
+      var(--sky-top) 7%,
       var(--sky-mid) 18%,
-      var(--sky-light) 32%,
-      #C8E6A0 55%,
-      var(--meadow-light) 72%,
-      var(--meadow) 88%,
-      var(--meadow-dark) 100%);
+      var(--sky-light) 34%,
+      #B8D8A0 50%,
+      var(--meadow-gold) 62%,
+      var(--meadow-light) 74%,
+      var(--meadow) 86%,
+      var(--meadow-dark) 96%,
+      #2D5018 100%);
+  background-size: 280px 280px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
   background-attachment: fixed;
 }
 
@@ -63,13 +91,16 @@ body::before {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.92;
+  filter: blur(1.5px);
+  mix-blend-mode: soft-light;
   background:
-    radial-gradient(ellipse 420px 120px at 12% 8%, var(--cloud) 0%, transparent 70%),
-    radial-gradient(ellipse 360px 100px at 38% 5%, rgba(255,255,255,0.75) 0%, transparent 68%),
-    radial-gradient(ellipse 500px 130px at 72% 10%, var(--cloud) 0%, transparent 72%),
-    radial-gradient(ellipse 280px 80px at 92% 18%, rgba(255,255,255,0.6) 0%, transparent 65%),
-    radial-gradient(ellipse 200px 60px at 55% 14%, rgba(255,255,255,0.5) 0%, transparent 60%);
-  opacity: 0.95;
+    radial-gradient(ellipse 480px 140px at 10% 9%, var(--cloud) 0%, transparent 68%),
+    radial-gradient(ellipse 380px 110px at 35% 4%, rgba(255, 252, 245, 0.82) 0%, transparent 66%),
+    radial-gradient(ellipse 560px 150px at 70% 8%, var(--cloud) 0%, transparent 70%),
+    radial-gradient(ellipse 300px 90px at 93% 16%, rgba(255, 248, 240, 0.7) 0%, transparent 64%),
+    radial-gradient(ellipse 240px 70px at 54% 12%, rgba(255, 255, 255, 0.55) 0%, transparent 58%),
+    radial-gradient(ellipse 320px 80px at 25% 22%, rgba(232, 200, 138, 0.25) 0%, transparent 62%);
 }
 
 body::after {
@@ -78,12 +109,17 @@ body::after {
   inset: 0;
   pointer-events: none;
   z-index: 0;
+  opacity: 0.72;
+  mix-blend-mode: multiply;
   background:
-    radial-gradient(circle at 8% 92%, rgba(255,248,231,0.5) 0%, transparent 8%),
-    radial-gradient(circle at 22% 88%, rgba(255,248,231,0.4) 0%, transparent 6%),
-    radial-gradient(circle at 45% 94%, rgba(255,248,231,0.45) 0%, transparent 7%),
-    radial-gradient(circle at 68% 90%, rgba(255,248,231,0.4) 0%, transparent 6%),
-    radial-gradient(circle at 85% 93%, rgba(255,248,231,0.5) 0%, transparent 8%);
+    radial-gradient(ellipse 120px 40px at 8% 94%, rgba(255, 248, 231, 0.65) 0%, transparent 72%),
+    radial-gradient(ellipse 90px 32px at 24% 90%, rgba(245, 208, 200, 0.45) 0%, transparent 68%),
+    radial-gradient(ellipse 100px 36px at 46% 93%, rgba(255, 248, 231, 0.55) 0%, transparent 70%),
+    radial-gradient(ellipse 85px 30px at 66% 91%, rgba(216, 200, 232, 0.4) 0%, transparent 66%),
+    radial-gradient(ellipse 110px 38px at 86% 94%, rgba(255, 248, 231, 0.6) 0%, transparent 72%),
+    radial-gradient(ellipse 200px 60px at 50% 98%, rgba(45, 80, 24, 0.35) 0%, transparent 75%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 128 128' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.08 0.45' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)' opacity='0.14'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 180px 180px;
 }
 
 a {
@@ -215,11 +251,16 @@ img {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 90px;
   background:
+    radial-gradient(ellipse 14px 10px at 10% 60%, var(--flower-pink) 0%, transparent 70%),
+    radial-gradient(ellipse 12px 9px at 28% 45%, var(--flower) 0%, transparent 68%),
+    radial-gradient(ellipse 13px 10px at 48% 65%, var(--flower-lavender) 0%, transparent 72%),
+    radial-gradient(ellipse 11px 8px at 68% 50%, var(--flower) 0%, transparent 66%),
+    radial-gradient(ellipse 14px 10px at 88% 58%, var(--flower-pink) 0%, transparent 70%),
     radial-gradient(circle, #FFF8E7 3px, transparent 3px) 0 0 / 28px 28px,
     radial-gradient(circle, rgba(255,255,255,0.7) 2px, transparent 2px) 14px 14px / 28px 28px;
-  opacity: 0.5;
+  opacity: 0.65;
 }
 
 .hero-grid {
@@ -390,7 +431,9 @@ section {
 }
 
 .section-panel {
-  background: var(--card);
+  background:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)' opacity='0.035'/%3E%3C/svg%3E"),
+    var(--card);
   border: 2px solid rgba(255, 255, 255, 0.7);
   border-radius: calc(var(--radius) + 4px);
   padding: 2.5rem 2rem;
