@@ -360,18 +360,23 @@ img {
 
 .hero-poster-trio {
   position: relative;
-  width: min(100%, 440px);
-  height: min(440px, 58vw);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 0.65rem;
+  width: min(100%, 500px);
+  padding: 1.5rem 0;
   margin-inline: auto;
 }
 
 .hero-phone {
-  position: absolute;
-  border-radius: 24px;
+  flex: 1;
+  min-width: 0;
+  border-radius: 18px;
   overflow: hidden;
   box-shadow:
-    0 20px 50px rgba(74, 55, 40, 0.28),
-    0 0 0 3px rgba(255, 255, 255, 0.5),
+    0 16px 40px rgba(74, 55, 40, 0.26),
+    0 0 0 2px rgba(255, 255, 255, 0.5),
     inset 0 0 0 1px rgba(255, 255, 255, 0.3);
   transition: transform 0.3s ease;
 }
@@ -383,51 +388,12 @@ img {
   display: block;
 }
 
-.hero-phone-left {
-  left: 0;
-  top: 10%;
-  width: 36%;
-  transform: rotate(-10deg);
-  z-index: 1;
-}
-
-.hero-phone-center {
-  left: 50%;
-  top: 0;
-  width: 42%;
-  transform: translateX(-50%);
-  z-index: 3;
-}
-
-.hero-phone-right {
-  right: 0;
-  top: 10%;
-  width: 36%;
-  transform: rotate(10deg);
-  z-index: 2;
-}
-
-.hero-poster-trio:hover .hero-phone-left {
-  transform: rotate(-12deg) translateY(-4px);
-}
-
-.hero-poster-trio:hover .hero-phone-center {
-  transform: translateX(-50%) translateY(-6px);
-}
-
-.hero-poster-trio:hover .hero-phone-right {
-  transform: rotate(12deg) translateY(-4px);
+.hero-poster-trio:hover .hero-phone {
+  transform: translateY(-4px);
 }
 
 .hero-phone-shadow {
-  position: absolute;
-  bottom: 2%;
-  left: 8%;
-  right: 8%;
-  height: 28px;
-  background: radial-gradient(ellipse, rgba(74, 55, 40, 0.28) 0%, transparent 70%);
-  filter: blur(10px);
-  z-index: 0;
+  display: none;
 }
 
 .hero-float-card {
@@ -446,13 +412,13 @@ img {
 }
 
 .hero-float-card.top {
-  top: 6%;
-  left: -12%;
+  top: 0;
+  left: 0;
 }
 
 .hero-float-card.bottom {
-  bottom: 12%;
-  right: -10%;
+  bottom: 0;
+  right: 0;
   animation-delay: 1.8s;
 }
 
@@ -1102,32 +1068,21 @@ section {
   }
 
   .hero-float-card.top {
-    left: -2%;
+    left: 0;
+    top: 0;
     font-size: 0.7rem;
   }
 
   .hero-float-card.bottom {
-    right: -2%;
+    right: 0;
+    bottom: 0;
     font-size: 0.7rem;
   }
 
   .hero-poster-trio {
-    width: min(100%, 360px);
-    height: min(360px, 72vw);
-  }
-
-  .hero-phone-left {
-    width: 34%;
-    top: 12%;
-  }
-
-  .hero-phone-center {
-    width: 40%;
-  }
-
-  .hero-phone-right {
-    width: 34%;
-    top: 12%;
+    width: min(100%, 100%);
+    gap: 0.45rem;
+    padding: 1.25rem 0;
   }
 
   .card-grid-five {
