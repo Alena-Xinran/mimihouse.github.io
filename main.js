@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (!lightbox || !lightboxImg) return;
 
-  document.querySelectorAll('.poster-frame').forEach((frame) => {
+  document.querySelectorAll('.poster-frame, .example-frame').forEach((frame) => {
     frame.addEventListener('click', () => {
       const img = frame.querySelector('img');
       if (!img) return;

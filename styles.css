@@ -945,6 +945,90 @@ section {
   margin-top: 0.5rem;
 }
 
+/* ── Detection examples ── */
+.examples-section {
+  padding: 3rem 0 4rem;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.example-card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 252, 245, 0.92);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 28px var(--shadow);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.example-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px var(--shadow-strong);
+}
+
+.example-frame {
+  cursor: pointer;
+  overflow: hidden;
+  background: #F5F0E8;
+  padding: 0.65rem 0.65rem 0;
+  max-height: 320px;
+}
+
+.example-frame img {
+  width: 100%;
+  border-radius: 14px 14px 0 0;
+  display: block;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.example-meta {
+  padding: 0.9rem 1rem 1.1rem;
+  flex: 1;
+}
+
+.example-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  margin-bottom: 0.45rem;
+  letter-spacing: 0.02em;
+}
+
+.example-tag.good {
+  background: rgba(106, 175, 74, 0.22);
+  color: #2D5018;
+  border: 1px solid rgba(94, 154, 66, 0.35);
+}
+
+.example-tag.watch {
+  background: rgba(232, 168, 90, 0.28);
+  color: #7A4E18;
+  border: 1px solid rgba(200, 140, 60, 0.35);
+}
+
+.example-meta h3 {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--primary-deepest);
+  margin-bottom: 0.3rem;
+}
+
+.example-meta p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
 /* Lightbox */
 .lightbox {
   display: none;
@@ -1349,6 +1433,10 @@ section {
     padding: 1.75rem 1.25rem;
   }
 
+  .examples-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .legal-content {
     padding: 1.5rem;
   }
@@ -1357,6 +1445,14 @@ section {
 @media (max-width: 520px) {
   .card-grid-five {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .examples-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .example-frame {
+    max-height: 360px;
   }
 
   .poster-slide {
