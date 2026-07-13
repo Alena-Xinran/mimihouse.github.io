@@ -24,7 +24,7 @@
 检测结果仅供参考，不能替代专业兽医诊断。紧急情况请立即就医。
 
 官网：https://www.mimi.house/zh/
-下载：https://apps.apple.com/us/app/id6778940906
+下载：https://apps.apple.com/cn/app/%E4%B9%9D%E9%BE%84%E7%8C%AB/id6778940906
 
 ## 备选方案 B（保留英文品牌名）
 
@@ -39,5 +39,5 @@ NineLivesCat - 九龄猫
 ---
 
 Apple ID（产品页唯一标识）：6778940906  
-产品页链接：https://apps.apple.com/us/app/id6778940906  
-中国区等价链接：https://apps.apple.com/cn/app/id6778940906
+英文产品页：https://apps.apple.com/us/app/id6778940906  
+中文产品页：https://apps.apple.com/cn/app/%E4%B9%9D%E9%BE%84%E7%8C%AB/id6778940906
