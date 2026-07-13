@@ -1248,6 +1248,29 @@ section {
   color: #FFFCF5;
 }
 
+.app-store-badge-link {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+  border-radius: 8px;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.app-store-badge-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+.app-store-badge {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+.cta-section .app-store-badge {
+  height: 48px;
+}
+
 /* ── Footer ── */
 .site-footer {
   position: relative;
