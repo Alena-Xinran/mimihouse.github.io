@@ -569,6 +569,12 @@ img {
   gap: 0.85rem;
 }
 
+.hero-actions .btn-primary {
+  text-align: center;
+  line-height: 1.35;
+  max-width: 100%;
+}
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -1223,6 +1229,13 @@ section {
   flex-wrap: wrap;
   gap: 0.85rem;
   justify-content: center;
+}
+
+.cta-panel p a {
+  color: var(--primary-deep);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .cta-section .btn-primary {
