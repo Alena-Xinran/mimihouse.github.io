@@ -1,0 +1,165 @@
+/* 竹知了 product page — extends site styles */
+
+.zl-page .hero {
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.zl-page .hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+.zl-page .hero h1 {
+  font-size: clamp(2.6rem, 7vw, 4rem);
+  letter-spacing: 0.08em;
+}
+
+.zl-icon-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 320px;
+}
+
+.zl-icon-glow {
+  position: absolute;
+  width: min(88%, 360px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 210, 120, 0.55) 0%, rgba(255, 180, 80, 0.18) 42%, transparent 70%);
+  filter: blur(8px);
+  animation: zl-pulse 4.5s ease-in-out infinite;
+}
+
+.zl-icon {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 340px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 28%;
+  box-shadow:
+    0 24px 60px rgba(20, 24, 40, 0.35),
+    0 0 0 1px rgba(255, 255, 255, 0.12);
+  animation: zl-float 5.5s ease-in-out infinite;
+}
+
+.zl-coming {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.9rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(255, 252, 245, 0.94);
+  border: 1.5px solid var(--border);
+  color: var(--primary-deepest);
+  font-weight: 800;
+  font-size: 0.95rem;
+  box-shadow: 0 6px 18px var(--shadow);
+}
+
+.zl-coming::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--meadow);
+  box-shadow: 0 0 0 3px rgba(94, 154, 66, 0.25);
+}
+
+.zl-features .card-grid-four {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.zl-features .feature-card {
+  padding: 1.25rem 1rem 1.35rem;
+  text-align: left;
+}
+
+.zl-features .feature-card h3 {
+  font-size: 1rem;
+  min-height: 0;
+  justify-content: flex-start;
+  margin-bottom: 0.4rem;
+}
+
+.zl-features .feature-card p {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.zl-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #F5E6D3, #FFFCF5);
+  border: 1.5px solid var(--border);
+  color: var(--primary-deep);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+.zl-local {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.zl-local p {
+  color: var(--text-secondary);
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.zl-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+@keyframes zl-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes zl-pulse {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+@media (max-width: 900px) {
+  .zl-features .card-grid-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .zl-features .card-grid-four {
+    grid-template-columns: 1fr;
+  }
+
+  .zl-icon-stage {
+    min-height: 240px;
+    order: -1;
+  }
+
+  .zl-page .hero-grid {
+    gap: 1.5rem;
+  }
+
+  .zl-icon {
+    width: min(72vw, 260px);
+  }
+}
