@@ -11,9 +11,24 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mimi.house/zh/</loc>
+    <loc>https://www.mimi.house/cat/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.mimi.house/cn/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mimi.house/founder/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.mimi.house/cn/founder/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.mimi.house/privacy/</loc>
@@ -26,12 +41,12 @@
     <priority>0.4</priority>
   </url>
   <url>
-    <loc>https://www.mimi.house/zh/privacy/</loc>
+    <loc>https://www.mimi.house/cn/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.mimi.house/zh/terms/</loc>
+    <loc>https://www.mimi.house/cn/terms/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -65,4 +80,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url><loc>https://www.mimi.house/followup/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mimi.house/cn/followup/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mimi.house/cn/app/</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.mimi.house/cn/cat/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>
